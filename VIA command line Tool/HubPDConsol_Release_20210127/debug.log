@@ -1,0 +1,161 @@
+====== Hub PD API Version(V11.028.00) on Install Tool 20210127 =====
+OS system: WIN8 WIN10
+
+EnumHubs
+->GetKnownHubs()
+deviceDetailData->DevicePath = \\?\pci#ven_8086&dev_9d2f&subsys_075b1028&rev_21#3&11583659&0&a0#{3abf6f2d-71c4-462a-8a92-1e6861e6af27}
+System name is {36fc9e60-c465-11cf-8056-444553540000}\0000
+ RootHubName is \\.\USB#ROOT_HUB30#4&521f308&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+->GetPortData with HubHandle = 28c, PortCount = 18, HubDepth = 0
+        Port[1]  Hub connected
+ [0]ConnectedHubName is \\.\USB#VID_05E3&PID_0660#5&301cb6ba&0&1#{f18a0e88-c30c-11d0-8815-00a0c906bed8} 
+->GetPortData with HubHandle = 290, PortCount = 4, HubDepth = 1
++1        Port[1]  I/O device connected
+idVendor:0x0529, idProduct:0x0001, bDeviceClass:0x00FF, bcdDevice:0x2503
++1        Port[2]  No device connected
++1        Port[3]  I/O device connected
+idVendor:0x04B4, idProduct:0xFDEA, bDeviceClass:0x0000, bcdDevice:0x0000
++1        Port[4]  I/O device connected
+idVendor:0x1BCF, idProduct:0x0005, bDeviceClass:0x0000, bcdDevice:0x1400
+<-GetPortData
+        Port[2]  Hub connected
+Device Descriptor
+  bDescriptorType     01
+  bcdUSB            0210
+  bDeviceClass        09
+  wVendorID         2109
+  wProductID        2822
+  wDeviceID         0703
+  iManufacturer       01
+    first Packet.Data = 
+    second Packet.Data = 
+    = VIA Labs, Inc.         
+  iProduct            02
+    second Packet.Data = 
+    = USB2.0 Hub             
+    second Packet.Data = 
+    = 000000001
+  ManufacturerString: VIA Labs, Inc.         USB2.0 Hub             
+  ProductString: USB2.0 Hub             
+  RegEditTargetVPString: Vid_2109&Pid_2822 
+ [0]ConnectedHubName is \\.\USB#VID_2109&PID_2822#MSFT20000000001#{f18a0e88-c30c-11d0-8815-00a0c906bed8} 
+trgchar1 = msft20000000001#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+ RegEditTargetSymbolicString: msft20000000001
+gHubNum++
+->GetPortData with HubHandle = 298, PortCount = 5, HubDepth = 1
++1        Port[1]  No device connected
++1        Port[2]  No device connected
++1        Port[3]  No device connected
++1        Port[4]  No device connected
++1        Port[5]  I/O device connected
+idVendor:0x2109, idProduct:0x8818, bDeviceClass:0x0011, bcdDevice:0x0100
+<-GetPortData
+        Port[3]  I/O device connected
+idVendor:0x0CF3, idProduct:0xE300, bDeviceClass:0x00E0, bcdDevice:0x0100
+        Port[4]  No device connected
+        Port[5]  I/O device connected
+idVendor:0x0C45, idProduct:0x670C, bDeviceClass:0x00EF, bcdDevice:0x2656
+        Port[6]  No device connected
+        Port[7]  No device connected
+        Port[8]  No device connected
+        Port[9]  No device connected
+        Port[10]  No device connected
+        Port[11]  No device connected
+        Port[12]  No device connected
+        Port[13]  No device connected
+        Port[14]  Hub connected
+Device Descriptor
+  bDescriptorType     01
+  bcdUSB            0320
+  bDeviceClass        09
+  wVendorID         2109
+  wProductID        0822
+  wDeviceID         0703
+  iManufacturer       01
+    first Packet.Data = 
+    second Packet.Data = 
+    = VIA Labs, Inc.         
+  iProduct            02
+    second Packet.Data = 
+    = USB3.1 Hub             
+    second Packet.Data = 
+    = 000000001
+  ManufacturerString: VIA Labs, Inc.         USB3.1 Hub             
+  ProductString: USB3.1 Hub             
+  RegEditTargetVPString: Vid_2109&Pid_0822 
+ [0]ConnectedHubName is \\.\USB#VID_2109&PID_0822#MSFT30000000001#{f18a0e88-c30c-11d0-8815-00a0c906bed8} 
+trgchar1 = msft30000000001#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+ RegEditTargetSymbolicString: msft30000000001
+gHubNum++
+->GetPortData with HubHandle = 290, PortCount = 4, HubDepth = 1
++1        Port[1]  I/O device connected
+idVendor:0x17E9, idProduct:0x4306, bDeviceClass:0x00EF, bcdDevice:0x5931
++1        Port[2]  No device connected
++1        Port[3]  No device connected
++1        Port[4]  No device connected
+<-GetPortData
+        Port[15]  No device connected
+        Port[16]  No device connected
+        Port[17]  No device connected
+        Port[18]  No device connected
+<-GetPortData
+HubName=\\.\USB#ROOT_HUB30#4, PortIndex=2
+HubName=\\.\USB#ROOT_HUB30#4, PortIndex=14
+---quit GetKnownHubs(), Get Known Hubs Number: 2
+
+
+EnumHubs - USB Mode: (3)
+DisableSelectiveSuspend HUB[1] CurrentHUBPath = \\.\usb#vid_2109&pid_0822#msft30000000001#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+
+Start to Search for Hub (speed: 3)
+EnumHubs_deviceDetailData->DevicePath = \\?\usb#root_hub30#4&521f308&0&0#{f18a0e88-c30c-11d0-8815-00a0c906bed8} 71
+EnumHubs_deviceDetailData->DevicePath = \\?\usb#vid_2109&pid_2822#msft20000000001#{f18a0e88-c30c-11d0-8815-00a0c906bed8} 80
+EnumHubs_deviceDetailData->DevicePath = \\?\usb#vid_2109&pid_0822#msft30000000001#{f18a0e88-c30c-11d0-8815-00a0c906bed8} 80
+DevicePath compare match trgVPID = vid_2109&pid_0822
+idVendor = 0x2109, idProduct = 0x0822, bcdDevice = 0x0703, Speed = 320
+TrgStr1 = msft30000000001#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+[0] CurrentHUBPath: , TrgPID: 0822
+[1] CurrentHUBPath: \\.\usb#vid_2109&pid_0822#msft30000000001#{f18a0e88-c30c-11d0-8815-00a0c906bed8}, TrgPID: 0822
+TrgStr2 = msft30000000001#{f18a0e88-c30c-11d0-8815-00a0c906bed8}
+
+GetHUBChipInfo() - VID: 0x2109, PID: 0x0822
+DeviceIoControl failed
+===== VT35xx Hub ID:0x3518 =====
+HUB VL820 Chip Ver: 00
+HUB Chip Version: F0
+Hub[0] - HUBType(11): Q7_Data_F0_VL822
+=> Selected
+   Get_10x_Ver, Temp_Hub_[0], FW=0703
+strCount[0] - Targeted FlashType=A25Lxxx, FlashID=3730 ReadID=9F
+Read FlashID=C2 20 , m_flashInfo.FlashIDLen = 2
+strCount[1] - Targeted FlashType=AT25F512A/B, FlashID=1F65 ReadID=15
+Read FlashID=00 00 , m_flashInfo.FlashIDLen = 2
+strCount[2] - Targeted FlashType=EN25Fxx, FlashID=1C31 ReadID=9F
+Read FlashID=C2 20 , m_flashInfo.FlashIDLen = 2
+strCount[3] - Targeted FlashType=GD25Qxxx, FlashID=C840 ReadID=9F
+Read FlashID=C2 20 , m_flashInfo.FlashIDLen = 2
+strCount[4] - Targeted FlashType=M25PxxA/xx, FlashID=20 ReadID=9F
+Read FlashID=C2 , m_flashInfo.FlashIDLen = 1
+strCount[5] - Targeted FlashType=MX25Lxxx/xxxC/xxxE, FlashID=C220 ReadID=9F
+Read FlashID=C2 20 , m_flashInfo.FlashIDLen = 2
+Get flashInfo - ChipErase: 60, SectorErase: 20
+      SpiData_21008_7_A_9 = 2109 0103
+CFlashCtrl::Check_FW_CRC(3)
+strCount[0] - Targeted FlashType=A25Lxxx, FlashID=3730 ReadID=9F
+Read FlashID=C2 20 , m_flashInfo.FlashIDLen = 2
+strCount[1] - Targeted FlashType=AT25F512A/B, FlashID=1F65 ReadID=15
+Read FlashID=00 00 , m_flashInfo.FlashIDLen = 2
+strCount[2] - Targeted FlashType=EN25Fxx, FlashID=1C31 ReadID=9F
+Read FlashID=C2 20 , m_flashInfo.FlashIDLen = 2
+strCount[3] - Targeted FlashType=GD25Qxxx, FlashID=C840 ReadID=9F
+Read FlashID=C2 20 , m_flashInfo.FlashIDLen = 2
+strCount[4] - Targeted FlashType=M25PxxA/xx, FlashID=20 ReadID=9F
+Read FlashID=C2 , m_flashInfo.FlashIDLen = 1
+strCount[5] - Targeted FlashType=MX25Lxxx/xxxC/xxxE, FlashID=C220 ReadID=9F
+Read FlashID=C2 20 , m_flashInfo.FlashIDLen = 2
+Get flashInfo - ChipErase: 60, SectorErase: 20
+Check = 5A97
+-->Check_CRC16_PASS
+EnumHubs_deviceDetailData->DevicePath = \\?\usb#vid_05e3&pid_0660#5&301cb6ba&0&1#{f18a0e88-c30c-11d0-8815-00a0c906bed8} 79
+GetEnumInfo Hub Number: 1
+Hub[1] - Depth: 0, VID: 2109, PID: 0822, FW Ver: 0703
